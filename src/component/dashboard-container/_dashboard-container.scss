@@ -3,7 +3,7 @@
 .dashboard-container{
   background-image: url('./assets/lips.png');
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: 77vw;
-  background-color: $black;
+  background-color: $primary;
 }

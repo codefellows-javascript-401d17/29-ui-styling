@@ -7,14 +7,19 @@ h1 {
   font-family: $font-primary;
   font-size: 4vw;
   color: $white;
+  text-transform: capitalize;
 }
 
 form{
-  
+  margin-top: 4vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  justify-content: space-evenly;
 }
 
 input {
-  background-color: $primary;
+  background-color: $white;
   opacity: .5;
   border-radius: $border-radius;
   box-sizing: border-box;
@@ -27,5 +32,31 @@ input {
   &:focus {
     background: #444;
     color: $white;
+  }
+}
+
+button {
+  margin-top: -3vw;
+  border: none;
+  color: $white;
+  background: $black;
+  opacity: .9;
+  padding: $gutter-sm $gutter-lg;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 2vw;
+
+  &:hover {
+    background: $btn-primary;
+  }
+
+  &.deleteButton {
+    background: none;
+    color: red;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    right: 0;
+    font-size: 2.5vw;
   }
 }
