@@ -3,11 +3,11 @@
 .title{
   background-color: $black;
   border-bottom: 1em solid  $secondary;
-  padding: $gutter-lg $gutter-sm;
+  padding: 8%;
   display:flex;
-  justify-content:center;
   align-items:center;
   justify-content: space-evenly;
+   box-sizing: border-box;
 }
 
 .grillimg{

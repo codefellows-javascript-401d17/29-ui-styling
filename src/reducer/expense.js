@@ -31,6 +31,7 @@ export default (state=initialState, action) => {
       return {...state, [categoryID]: [...categoryExpense, payload]}
 
     case 'EXPENSE_UPDATE':
+    console.log(payload);
       validateExpense(payload);
       categoryID = payload.categoryID;
       categoryExpense = state[categoryID];

@@ -10,6 +10,17 @@ h1 {
   text-transform: capitalize;
 }
 
+p {
+  color: $white;
+}
+
+h2 {
+  color: $white;
+}
+
+h3 {
+  color: $white;
+}
 form{
   margin-top: 4vw;
   display:flex;
@@ -28,6 +39,7 @@ input {
   font-size: 2vw;
   margin-bottom: $gutter-sm;
   border: none;
+  text-transform: capitalize;
 
   &:focus {
     background: #444;
@@ -36,6 +48,7 @@ input {
 }
 
 button {
+  text-transform: capitalize;
   margin-top: -3vw;
   border: none;
   color: $white;
@@ -52,9 +65,9 @@ button {
 
   &.deleteButton {
     background: none;
-    color: red;
+    color: $tertiery;
     position: absolute;
-    top: 0;
+    margin-left: 1vw;
     padding: 0;
     right: 0;
     font-size: 2.5vw;
