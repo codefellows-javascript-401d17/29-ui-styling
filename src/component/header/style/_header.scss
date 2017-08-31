@@ -1,0 +1,16 @@
+@import "src/style/lib/vars.scss";
+
+.title{
+  background-color: $black;
+  border-bottom: 1em solid  $secondary;
+  padding: $gutter-lg $gutter-sm;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-transform: capitalize;
+  justify-content: space-evenly;
+}
+
+.grillimg{
+  width: 15vw;
+}

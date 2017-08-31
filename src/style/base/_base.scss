@@ -1,0 +1,31 @@
+@import "../lib/vars.scss";
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+
+h1 {
+  font-family: $font-primary;
+  font-size: 4vw;
+  color: $white;
+}
+
+form{
+  
+}
+
+input {
+  background-color: $primary;
+  opacity: .5;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: $gutter-sm;
+  width: 25%;
+  font-size: 2vw;
+  margin-bottom: $gutter-sm;
+  border: none;
+
+  &:focus {
+    background: #444;
+    color: $white;
+  }
+}
