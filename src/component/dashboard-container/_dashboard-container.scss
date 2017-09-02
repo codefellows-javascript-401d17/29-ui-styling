@@ -1,9 +1,10 @@
 @import "../../style/lib/vars.scss";
 
 .dashboard-container{
+  padding-top: 5vw;
   background-image: url('./assets/grill.jpg');
   background-position: 50% 0%;
   background-repeat: repeat-y;
-  background-size: 35vw;
+  background-size: 27vw;
   background-color: $primary;
 }

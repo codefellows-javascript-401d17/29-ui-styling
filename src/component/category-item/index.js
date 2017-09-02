@@ -13,7 +13,7 @@ class CategoryItem extends React.Component {
   render() {
     let {category, categoryUpdate, categoryDelete, expenseCreate, expense, expenses} = this.props;
     return(
-      <li>
+      <li className="categoryItem">
         <h2>{category.title}</h2>
         <h3>{category.budget}</h3>
         <button className='deleteButton' onClick={()=>categoryDelete(category)}>x</button>
