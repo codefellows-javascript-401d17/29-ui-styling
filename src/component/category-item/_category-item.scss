@@ -1,6 +1,6 @@
 @import "src/style/lib/vars.scss";
 
-.categoryItem{
+.categoryItem .categoryli {
   position:relative;
   background-color: $white;
   opacity: .9;
@@ -12,12 +12,14 @@
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 $tertiery;
   transition: $transition-primary;
-  margin-top: 3vw
+  margin-top: 3vw;
 
   &:hover {
     box-shadow: 0 16px 32px 0 $tertiery;
   }
+}
 
+.categoryItem {
   form{
     input{
       background-color: $black;

@@ -2,16 +2,24 @@
 
 .title{
   background-color: $black;
-  border-bottom: 1em solid  $secondary;
   padding: 3%;
   display:flex;
   align-items:center;
   justify-content: space-evenly;
   box-sizing: border-box;
+  box-shadow: 0 8px 8px 0 $tertiery;
+  h1{
+    filter: drop-shadow(0px 12px 7px rgba(255, 215, 0, 0.5));
+  }
 }
 
 .grillimg{
   width: 15vw;
+}
+
+.shadowfilter {
+    -webkit-filter: drop-shadow(0px 12px 7px rgba(255, 215, 0, 0.5));
+     filter: drop-shadow(0px 12px 7px rgba(255, 215, 0, 0.5));
 }
 
 .gold-text {

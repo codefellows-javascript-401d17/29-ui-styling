@@ -15,36 +15,39 @@ class CategoryItem extends React.Component {
   render() {
     let {category, categoryUpdate, categoryDelete, expenseCreate, expense, expenses} = this.props;
     return(
-      <li className="categoryItem">
-        <h2>{category.title}</h2>
-        <h3>{category.budget}</h3>
-        <button className='deleteButton' onClick={()=>categoryDelete(category)}>x</button>
-        <div className='editing'>
-          <CategoryForm
-            buttonText='update category'
-            category={category}
-            onComplete={categoryUpdate}
-            />
-        </div>
-        <ExpenseForm
-          buttonText='add expense'
-          categoryID={category.id}
-          onComplete={expenseCreate}
-          />
-        <section>
+      <div className='categoryItem'>
 
-          <ul>
-            {expenses.map((item) => {
-              return (
-                <ExpenseItem
-                  key={item.id}
-                  expense={item}
-                  />
-              )
-            })}
-          </ul>
-        </section>
-      </li>
+        <li className='categoryli'>
+          <h2>{category.title}</h2>
+          <h3>{category.budget}</h3>
+          <button className='deleteButton' onClick={()=>categoryDelete(category)}>x</button>
+          <div className='editing'>
+            <CategoryForm
+              buttonText='update category'
+              category={category}
+              onComplete={categoryUpdate}
+              />
+          </div>
+          <ExpenseForm
+            buttonText='add expense'
+            categoryID={category.id}
+            onComplete={expenseCreate}
+            />
+          <section>
+
+            <ul>
+              {expenses.map((item) => {
+                return (
+                  <ExpenseItem
+                    key={item.id}
+                    expense={item}
+                    />
+                )
+              })}
+            </ul>
+          </section>
+        </li>
+      </div>
     )
   }
 }

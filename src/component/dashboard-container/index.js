@@ -9,7 +9,7 @@ class DashboardContainer extends React.Component {
   render() {
     return(
       <main className="dashboard-container">
-        <h1 className="silver-text">budget</h1>
+        <h1 className="silver-text area">budget</h1>
 
         <CategoryForm
           buttonText='create category'

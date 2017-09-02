@@ -1,6 +1,7 @@
 @import "../lib/vars.scss";
 @import url("https://fonts.googleapis.com/css?family=Great+Vibes");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
 
 
 h1 {
@@ -24,6 +25,7 @@ h2 {
 
 h3 {
   color: $black;
+  font-family:"Reenie Beanie",arial,sans-serif;
 }
 form{
   margin-top: 4vw;

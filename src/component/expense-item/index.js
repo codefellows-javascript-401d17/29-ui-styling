@@ -1,3 +1,4 @@
+import './_expense-item.scss';
 import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseForm from '../expense-form';
@@ -8,7 +9,7 @@ class ExpenseItem extends React.Component {
   render() {
     let {expenseUpdate, expenseDelete, expense, category} = this.props;
     return(
-      <li>
+      <li className='expense-item'>
         <h2>{expense.title}</h2>
         <h3>{expense.price}</h3>
         <button className='deleteButton' onClick={()=>expenseDelete(expense)}>x</button>

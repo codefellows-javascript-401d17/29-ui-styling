@@ -8,10 +8,10 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <section className="title">
-          <h1 className="titleName gold-text">save dat money</h1>
-          <img className="grillimg" src="src/component/header/assets/grill.png"></img>
-          <h1 className="titleName gold-text">keep dat money</h1>
+        <section className='title'>
+          <h1 className='titleName gold-text'>save dat money</h1>
+          <img className='grillimg shadowfilter' src='src/component/header/assets/grill.png'></img>
+          <h1 className='titleName gold-text'>keep dat money</h1>
         </section>
           <nav>
             <ul>
