@@ -9,9 +9,9 @@ class Header extends React.Component {
     return (
       <header>
         <section className="title">
-          <h1 className="titleName">save dat money</h1>
+          <h1 className="titleName gold-text">save dat money</h1>
           <img className="grillimg" src="src/component/header/assets/grill.png"></img>
-          <h1 className="titleName">keep dat money</h1>
+          <h1 className="titleName gold-text">keep dat money</h1>
         </section>
           <nav>
             <ul>

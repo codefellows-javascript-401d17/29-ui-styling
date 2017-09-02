@@ -8,3 +8,12 @@
   background-size: 27vw;
   background-color: $primary;
 }
+
+.silver-text {
+    color:#c0c0c0;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('./assets/silver.jpg') repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+}

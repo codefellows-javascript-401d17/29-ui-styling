@@ -7,9 +7,18 @@
   display:flex;
   align-items:center;
   justify-content: space-evenly;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .grillimg{
   width: 15vw;
+}
+
+.gold-text {
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url('../assets/gold.png') repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
 }
