@@ -43,6 +43,22 @@ export default (state=initialState, action) => {
       categoryExpense = state[categoryID];
     return {...state, [categoryID]: categoryExpense.filter(expense => expense.id !== payload.id)}
 
+    case 'EXPENSE_EDIT':
+    categoryID = payload.categoryID;
+    console.log(categoryID);
+    categoryExpense = state[categoryID];
+    return {...state, [categoryID]: categoryExpense.map(expense => {
+      console.log('Hello');
+      console.log(expense.id);
+      console.log(payload.id);
+      if(expense.id === payload.id){
+        payload.editing = true
+        return payload
+      }else {
+        return expense
+      }
+    })}
+
     default:
       return state;
   }
