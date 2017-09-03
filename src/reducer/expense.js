@@ -31,8 +31,8 @@ export default (state=initialState, action) => {
       return {...state, [categoryID]: [...categoryExpense, payload]}
 
     case 'EXPENSE_UPDATE':
-    console.log(payload);
       validateExpense(payload);
+      payload.editing = false;
       categoryID = payload.categoryID;
       categoryExpense = state[categoryID];
       return {...state, [categoryID]: categoryExpense.map(expense => expense.id === payload.id ? payload : expense)}

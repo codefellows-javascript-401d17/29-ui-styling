@@ -9,14 +9,14 @@ class ExpenseItem extends React.Component {
   render() {
     let {expenseUpdate, expenseDelete, expenseEdit, expense, category} = this.props;
     return(
-      <section>
+        <li className='expense-item' onDoubleClick={()=>expenseEdit(expense)}>
         {expense.editing === false ?
-          <li className='expense-item' onDoubleClick={()=>expenseEdit(expense)}>
+          <div>
             <h2>{expense.title}</h2>
             <h3>{expense.price}</h3>
             <button className='deleteButton' onClick={()=>expenseDelete(expense)}>x</button>
-          </li> :
-          <li className='expense-item'>
+          </div>
+              :
 
             <div className='editing'>
               <ExpenseForm
@@ -25,9 +25,8 @@ class ExpenseItem extends React.Component {
                 onComplete={expenseUpdate}
                 />
             </div>
-          </li>
         }
-      </section>
+      </li>
     )
   }
 }

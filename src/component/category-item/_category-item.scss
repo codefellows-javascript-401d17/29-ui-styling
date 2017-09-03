@@ -1,9 +1,5 @@
 @import "src/style/lib/vars.scss";
 
-ul{
-
-}
-
 .categoryItem .categoryli {
   position:relative;
   background-color: $white;
@@ -37,4 +33,8 @@ ul{
       }
     }
   }
+}
+
+section {
+  display: inline;
 }

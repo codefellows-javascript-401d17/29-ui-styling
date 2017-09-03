@@ -37,7 +37,6 @@ class CategoryItem extends React.Component {
 
             <ul>
               {expenses.map((item) => {
-                console.log('ITEM______',item);
                 return (
                   <ExpenseItem
                     key={item.id}
