@@ -1,0 +1,84 @@
+@import "../lib/vars.scss";
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie");
+
+
+h1 {
+  font-family: $font-primary;
+  font-size: 5vw;
+  font-weight: bolder;
+  color: $white;
+  text-transform: capitalize;
+  padding: 1vw;
+}
+
+
+p {
+  color: $black;
+}
+
+h2 {
+  color: $black;
+  font-family: $font-primary;
+  font-size: 3vw;
+}
+
+h3 {
+  color: $black;
+  font-family:"Reenie Beanie",arial,sans-serif;
+}
+form{
+  margin-top: 4vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  justify-content: space-evenly;
+}
+
+input {
+  background-color: $white;
+  opacity: .5;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  padding: $gutter-sm;
+  width: 25%;
+  font-size: 2vw;
+  margin-bottom: $gutter-sm;
+  border: none;
+  text-transform: capitalize;
+  outline: none;
+
+  &:focus {
+    background: #444;
+    color: $white;
+  }
+}
+
+button {
+  text-transform: capitalize;
+  margin-top: -3vw;
+  border: none;
+  color: $white;
+  background: $black;
+  opacity: .9;
+  padding: $gutter-sm $gutter-lg;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 2vw;
+  transition: $transition-primary;
+
+  &:hover {
+    background: $btn-primary;
+  }
+
+  &.deleteButton {
+    background: none;
+    color: $tertiery;
+    position: absolute;
+    margin-left: 1vw;
+    padding: 0;
+    right: 2vw;
+    font-size: 2.5vw;
+  }
+}

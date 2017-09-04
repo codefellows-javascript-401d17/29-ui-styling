@@ -1,0 +1,44 @@
+@import "src/style/lib/vars.scss";
+
+.categoryItem .categoryli {
+  position:relative;
+  background-color: $white;
+  opacity: .9;
+  width: 96vw;
+  border-radius: $border-radius;
+  border-style: solid;
+  border-color: $black;
+  border-width: $gutter-sm / 3;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 $tertiery;
+  transition: $transition-primary;
+  margin-top: 3vw;
+
+  &:hover {
+    box-shadow: 0 16px 32px 0 $tertiery;
+  }
+}
+
+.categoryItem {
+  form{
+    input{
+      background-color: $black;
+      color: $white;
+      outline: none;
+    }
+    button{
+      background-color: green;
+      &:hover{
+        background-color: $tertiery;
+      }
+    }
+  }
+}
+
+section {
+  display: inline;
+}
+
+ul {
+  text-align: center;
+}
