@@ -1,3 +1,5 @@
+import './_category-item.scss';
+
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -13,29 +15,33 @@ class CategoryItem extends React.Component {
 
     return (
       <section className='category-item'>
-        <button onClick={() => this.props.categoryDelete(this.props.category)}>X</button>
-
-        <div>
+        <div className='category-container'>
           <h2>{this.props.category.name}</h2>
-          <p>budget: {this.props.category.budget}</p>
+          <p className='money'>${this.props.category.budget}</p>
+          <button className='remove'
+          onClick={() => this.props.categoryDelete(this.props.category)}>x</button>
+
+
+
+          <CategoryForm
+            buttonText='update'
+            onComplete={this.props.categoryUpdate}
+            category={this.props.category}
+          />
         </div>
 
-        <CategoryForm
-          buttonText='update'
-          onComplete={this.props.categoryUpdate}
-          category={this.props.category}
-        />
+        <div className='expense-container'>
+          <h3>{this.props.category.name} expenses:</h3>
+          <ExpenseForm
+            buttonText='add'
+            onComplete={this.props.expenseCreate}
+            category={this.props.category}
+          />
 
-
-        <ExpenseForm
-          buttonText='add'
-          onComplete={this.props.expenseCreate}
-          category={this.props.category}
-        />
-
-        {this.props.expenses ? this.props.expenses[categoryID].map(item =>
-          <ExpenseItem key={item.id} expense={item} />
-        ) : <p>add an expense</p>}
+          {this.props.expenses[categoryID].length > 0 ? this.props.expenses[categoryID].map(item =>
+            <ExpenseItem key={item.id} expense={item} />
+          ) : <p>* add an expense *</p>}
+        </div>
       </section>
     )
   }

@@ -1,6 +1,6 @@
-@import 'vars';
-@import 'reset';
-@import 'base';
-@import 'header';
-@import 'content';
-@import 'footer';
+@import './lib/vars';
+@import './base/reset';
+@import './base/base';
+@import './layout/header';
+@import './layout/content';
+@import './layout/footer';

@@ -1,4 +1,67 @@
 body {
   background: $brand-secondary;
-  
+  font-family: $font-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+button {
+  border: none;
+  border-radius: $border-radius;
+  background: $black;
+  color: $white;
+  padding: $gutter-sm $gutter-lg;
+  transition: $transition;
+  font-size: 2vw;
+  margin: $gutter-sm;
+
+  &:hover {
+    background: $btn-primary;
+  }
+
+  &.remove {
+    color: #111;
+    background: none;
+    font-size: 3vw;
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      color: $error;
+    }
+  }
+}
+
+input {
+  width: 40%;
+  border-radius: $border-radius;
+  border: solid .5vw $black;
+  box-sizing: border-box;
+  padding: $gutter-sm;
+  margin: $gutter-sm $gutter-sm $gutter-sm 0;
+
+  &[type=number] {
+    width: 20%;
+  }
+}
+
+h2 {
+  font-size: 4.5vw;
+  font-family: $font-header;
+  display: inline;
+  margin-right: $gutter-sm;
+
+  &:first {
+    display: block;
+  }
+}
+
+.money {
+  display: inline;
+  font-size: 4.5vw;
+  margin-right: $gutter-sm;
+  color: $money;
 }
