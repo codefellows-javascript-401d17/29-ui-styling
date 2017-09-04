@@ -18,7 +18,7 @@ let plugins = [
   })
 ]
 
-if(production) {
+if (production) {
   plugins = plugins.concat([ new CleanPlugin(), new UglifyPlugin() ]);
 }
 
@@ -63,7 +63,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            option: { name: 'audio/[name].[ext]'}
+            options: { name: 'audio/[name].[ext]' }
           }
         ]
       }
