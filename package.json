@@ -25,9 +25,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ragnaroksedge/29-ui-styling/issues"
+    "url": "https://github.com/allanliebold/29-ui-styling/issues"
   },
-  "homepage": "https://github.com/ragnaroksedge/29-ui-styling#readme",
+  "homepage": "https://github.com/allanliebold/29-ui-styling#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
