@@ -13,7 +13,7 @@ class ExpenseItem extends React.Component {
         {expense.editing === false ?
           <div>
             <h2>{expense.title}</h2>
-            <h3>{expense.price}</h3>
+            <h3>${expense.price}</h3>
             <button className='deleteButton' onClick={()=>expenseDelete(expense)}>x</button>
           </div>
               :

@@ -22,12 +22,25 @@
   }
 
   h3{
-    font-size:180%;
+    font-size: 3vw;
   }
 
   .deleteButton{
     display: inline-block;
     margin-top: -6vw;
+  }
+  form{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    input{
+      width: 17vw;
+      height: 3vw;
+      margin-top: -2vw;
+    }
   }
 }
 
