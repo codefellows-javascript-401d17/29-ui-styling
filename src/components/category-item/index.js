@@ -19,7 +19,7 @@ class CategoryItem extends React.Component {
     return (
       <li key={this.props.category.id}>
         &lt;CategoryItem /&gt;
-        <button onClick={() => {
+        <button className='deleteCategoryButton'onClick={() => {
           return this.props.categoryDelete(this.props.category)
         }}>X</button>
         <h4>name: {this.props.category.name}</h4>

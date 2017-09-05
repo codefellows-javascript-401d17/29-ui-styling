@@ -1,10 +1,9 @@
 'use strict';
 
 require('dotenv').config({ path: `${__dirname}/.dev.env` });
-//see DefinePlugin (this line for production)
 const production = process.env.NODE_ENV === 'production';
 
-const { DefinePlugin, EnvironmentPlugin } = require('webpack');
+const {DefinePlugin, EnvironmentPlugin} = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 const UglifyPlugin = require('uglifyjs-webpack-plugin');
@@ -14,30 +13,37 @@ let plugins = [
   new EnvironmentPlugin(['NODE_ENV']),
   new ExtractPlugin('bundle-[hash].css'),
   new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
-  //env vars as webpack constant
   new DefinePlugin({
     __DEBUG__: JSON.stringify(!production)
   })
 ]
 
 if (production) {
-  //take all plugins => single plugin
-  plugins = plugins.concat([new CleanPlugin(), new UglifyPlugin()])
+  plugins = plugins.concat([ new CleanPlugin(), new UglifyPlugin() ]);
 }
 
 module.exports = {
+  plugins,
   entry: `${__dirname}/src/main.js`,
+  devServer: {
+    historyApiFallback: true
+  },
+  devtool: production ? undefined : 'eval',
   output: {
     path: `${__dirname}/build`,
     filename: 'bundle-[hash].js',
     publicPath: process.env.CDN_URL
   },
-  plugins,
   module: {
     rules: [
-      { test: /\.js$/, exclude: /\node_modules/, loader: 'babel-loader' },
       {
-        test: /\.scss$/, loader: ExtractPlugin.extract(['css-loader', 'sass-loader'])
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractPlugin.extract(['css-loader', 'sass-loader'])
       },
       {
         test: /\.(woff|woff2|ttf|eot|glyph|\.svg)$/,
@@ -65,21 +71,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.(mp3|aac|wav|flac|m4a|mp4|ogg)$/,
+        test: /\.(mp3|aac|aiff|wav|flac|m4a|mp4|ogg)$/,
         exclude: /\.glyph.svg/,
         use: [
           {
             loader: 'file-loader',
-            options: {
-              name: 'audio/[name].[ext]'
-            }
+            options: { name: 'audio/[name].[ext]' }
           }
         ]
       }
     ]
-  },
-  devServer: {
-    historyApiFallback: true
-  },
-  devtool: 'inline-source-map'
+  }
 }

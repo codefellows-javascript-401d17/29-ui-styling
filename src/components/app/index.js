@@ -17,13 +17,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <section>
-        <Provider store={store}>
-          <BrowserRouter>
-            <Route exact path='/' component={DashboardContainer} />
-          </BrowserRouter>
-        </Provider>
-      </section>
+      <div>
+        <header>
+          Budget Tracekr
+        </header>
+        <section>
+          <Provider store={store}>
+            <BrowserRouter>
+              <Route exact path='/' component={DashboardContainer} />
+            </BrowserRouter>
+          </Provider>
+        </section>
+      </div>
     )
   }
 }

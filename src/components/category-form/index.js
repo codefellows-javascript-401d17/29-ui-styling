@@ -28,8 +28,7 @@ class CategoryForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <p>&lt;CategoryForm /&gt;</p>
+      <form className='categoryForm' onSubmit={this.handleSubmit}>
         <input
           type='text'
           id='submitField'
@@ -46,7 +45,7 @@ class CategoryForm extends React.Component {
           onChange={this.handleChange}
           placeholder='enter a budget for this category'
         />
-        <button type='submit'>{this.props.buttonText}</button>
+        <button id='createButton' type='submit'>{this.props.buttonText}</button>
       </form>
     )
 

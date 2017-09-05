@@ -1,0 +1,47 @@
+$red: blue;
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: $red;  
+}
+
+header {
+  font-family: 'Avenir', Arial, sans-serif;
+  text-align: center;
+  background: steelblue;
+  padding: 0.5em 1em;
+  color: lightblue;
+  border-bottom: 1px solid lightblue;
+  box-shadow: 2px 2px 10px black;
+}
+
+#createButton {
+  color: steelblue;
+
+  &:hover {
+    background: steelblue;
+    color: lightblue;
+  }
+}
+
+.deleteCategoryButton {
+  &:hover {
+    border: 1px solid crimson;
+    background: lightcoral;
+    color: white;
+  }
+}
+
+button {
+  border: 1px solid steelblue;
+}
+
+
+
+.categoryForm {
+  margin: 3em 0em;
+  padding: 0 1.5em;
+}
