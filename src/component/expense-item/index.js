@@ -18,7 +18,7 @@ class ExpenseItem extends React.Component {
           </div>
               :
 
-            <div className='editing'>
+            <div className='editingExpense'>
               <ExpenseForm
                 expense={expense}
                 buttonText='update expense'

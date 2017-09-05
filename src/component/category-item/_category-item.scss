@@ -21,7 +21,9 @@
 
 .categoryItem{
   h2{
-    font-size: 5vw
+    padding-top: 2vw;
+    font-size: 5vw;
+    text-transform: capitalize;
   }
   h3{
     font-size: 4vw
@@ -36,6 +38,15 @@
       background-color: green;
       &:hover{
         background-color: $tertiery;
+      }
+    }
+  }
+  .exbutton{
+    form{
+
+      button{
+
+        width: 28vw;
       }
     }
   }

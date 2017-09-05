@@ -27,7 +27,7 @@
 
   .deleteButton{
     display: inline-block;
-    margin-top: -6vw;
+    margin-top: -10vw;
   }
   form{
     flex-direction: column;
@@ -41,6 +41,13 @@
       height: 3vw;
       margin-top: -2vw;
     }
+  }
+}
+
+.editingExpense{
+  button{
+    width: 19vw;
+    height: 10vw;
   }
 }
 

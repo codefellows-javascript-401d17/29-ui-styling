@@ -28,11 +28,14 @@ class CategoryItem extends React.Component {
               onComplete={categoryUpdate}
               />
           </div>
-          <ExpenseForm
-            buttonText='add expense'
-            categoryID={category.id}
-            onComplete={expenseCreate}
-            />
+          <div className='exbutton'>
+
+            <ExpenseForm
+              buttonText='add expense'
+              categoryID={category.id}
+              onComplete={expenseCreate}
+              />
+          </div>
           <section>
 
             <ul>
