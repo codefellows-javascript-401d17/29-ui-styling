@@ -13,11 +13,17 @@ class CategoryItem extends React.Component {
   render() {
     let categoryID = this.props.category.id;
 
+    let totalSpent = this.props.expenses[categoryID].reduce((p, c) => {
+      return p + c.price;
+    }, 0);
+
+    let remainingBudget = this.props.category.budget - totalSpent;
+
     return (
       <section className='category-item'>
         <div className='category-container'>
           <h2>{this.props.category.name}</h2>
-          <p className='money'>${this.props.category.budget}</p>
+          <p className='money'>${remainingBudget}</p>
           <button className='remove'
           onClick={() => this.props.categoryDelete(this.props.category)}>x</button>
 
