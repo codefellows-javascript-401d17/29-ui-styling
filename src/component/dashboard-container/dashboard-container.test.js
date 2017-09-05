@@ -16,7 +16,7 @@ describe('Dashboard Container Component', () => {
     let wrapper = shallow(<DashboardContainer store={mockStore} />);
 
     expect(wrapper.props().categories).toEqual([]);
-    wrapper.props().categoryCreate({ title: 'test category' });
+    wrapper.props().categoryCreate({ title: 'test category', id: '123', budget: '1', timestamp: '07/07/17' });
     let {categories} = mockStore.getState();
     expect(categories[0].title).toEqual('test category');
   })
