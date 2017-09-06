@@ -1,0 +1,22 @@
+@import "../../style/lib/vars.scss";
+
+.dashboard-container{
+  padding-top: 5vw;
+  background-image: url('./assets/grill.jpg');
+  background-position: 50% 0%;
+  background-repeat: repeat-y;
+  background-size: 27vw;
+  background-color: $primary;
+  h1{
+    filter: drop-shadow(0px 12px 7px rgba(192, 192, 192, 0.5));
+  }
+}
+
+.silver-text {
+  color:#c0c0c0;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(transparent, transparent),
+  url('./assets/silver.jpg') repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+}
