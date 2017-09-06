@@ -22,12 +22,32 @@
   }
 
   h3{
-    font-size:180%;
+    font-size: 3vw;
   }
 
   .deleteButton{
     display: inline-block;
-    margin-top: -6vw;
+    margin-top: -12vw;
+  }
+  form{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    input{
+      width: 17vw;
+      height: 3vw;
+      margin-top: -2vw;
+    }
+  }
+}
+
+.editingExpense{
+  button{
+    width: 19vw;
+    height: 10vw;
   }
 }
 
@@ -61,6 +81,23 @@ ul .expense-item{
   -moz-transform:rotate(5deg);
   position:relative;
   top:-10px;
+}
+
+.expense-item:nth-child(even) {
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.expense-item:nth-child(3n) {
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
 }
 
 ul .expense-item:hover,ul .expense-item:focus{

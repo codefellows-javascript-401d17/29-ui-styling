@@ -14,12 +14,19 @@ import {expenseUpdate, expenseDelete, expenseCreate} from '../../action/expense-
 class CategoryItem extends React.Component {
   render() {
     let {category, categoryUpdate, categoryDelete, expenseCreate, expense, expenses} = this.props;
+    let totalSpent = this.props.expenses.reduce((p, c) => {
+      return p + c.price;
+    }, 0)
+
+    let remaining = category.budget - totalSpent;
     return(
       <div className='categoryItem'>
 
         <li className='categoryli'>
           <h2>{category.title}</h2>
-          <h3>{category.budget}</h3>
+          <h3>total budget: ${category.budget}</h3>
+          <h3>total spent: ${totalSpent}</h3>
+          <h3>total budget left: ${remaining}</h3>
           <button className='deleteButton' onClick={()=>categoryDelete(category)}>x</button>
           <div className='editing'>
             <CategoryForm
@@ -28,11 +35,14 @@ class CategoryItem extends React.Component {
               onComplete={categoryUpdate}
               />
           </div>
-          <ExpenseForm
-            buttonText='add expense'
-            categoryID={category.id}
-            onComplete={expenseCreate}
-            />
+          <div className='exbutton'>
+
+            <ExpenseForm
+              buttonText='add expense'
+              categoryID={category.id}
+              onComplete={expenseCreate}
+              />
+          </div>
           <section>
 
             <ul>
